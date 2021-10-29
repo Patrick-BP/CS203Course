@@ -21,18 +21,16 @@ public class DailyTemp {
         for (int i = 1; i < temps.length; i++) {
             if(temps[i] > max){
                 max = temps[i];
-                indexMax = i;
+
             }
         }
         for (int i = 1; i < temps.length; i++) {
             if(temps[i] < min){
                 min = temps[i];
-                indexMin = i;
             }
         }
         System.out.println("maximum: "+ max);
-        System.out.println("index: "+ indexMax);
         System.out.println("minimum: "+min);
-        System.out.println("index: "+ indexMin);
+
     }
 }
