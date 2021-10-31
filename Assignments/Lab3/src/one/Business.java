@@ -1,15 +1,18 @@
 package one;
 
-import two.Address;
-import two.Contacts;
+
+import java.util.List;
 
 public class Business extends Contacts {
 
     public Business() {
     }
 
-    public Business(String name, Address address, String phone, String email, String note) {
-        super(name, address, phone, email, note);
+    public Business(String name, List<String> phone, List<String> email, List<Address> address, String note) {
+        super(name, phone, email, address, note);
+    }
+    public Business(String name, List<String> phone, List<String> email, List<Address> address) {
+        super(name, phone, email, address);
     }
 
     @Override
