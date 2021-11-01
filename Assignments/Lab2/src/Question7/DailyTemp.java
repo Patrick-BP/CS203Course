@@ -5,32 +5,27 @@ import java.util.Random;
 
 public class DailyTemp {
     public static void main(String[] args) {
-        int[] temps = new int[365];
-        int[] daysInMonth = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
-        String[] months = {"jan", "Feb", "march","april","mai","june","july","aug","sept","oct","nov","dec"};
+        double[] temperatures = new double[365];
         Random rand = new Random();
-
-        for (int i = 0; i < temps.length; i++) {
-            temps[i] = rand.nextInt(96)+10;
+        for (int i = 0; i < temperatures.length; i++) {
+           temperatures[i] = rand.nextInt(96) + 10;
         }
-        System.out.println(Arrays.toString(temps));
-        int min = temps[0];
-        int indexMin=0;
-        int max = temps[0];
-        int indexMax = 0;
-        for (int i = 1; i < temps.length; i++) {
-            if(temps[i] > max){
-                max = temps[i];
 
-            }
-        }
-        for (int i = 1; i < temps.length; i++) {
-            if(temps[i] < min){
-                min = temps[i];
-            }
-        }
-        System.out.println("maximum: "+ max);
-        System.out.println("minimum: "+min);
+        System.out.println(Arrays.toString(hotCold(temperatures)));
 
+    }
+
+    public static double[] hotCold(double[] arr) {
+
+        double hottest = arr[0];
+        double coldest = arr[0];
+        double[] arr2 = new double[2];
+        for (int j = 1; j < arr.length; j++) {
+            if (arr[j] > hottest) hottest = arr[j];
+            if (arr[j] < coldest) coldest = arr[j];
+        }
+        arr2[0] = hottest;
+        arr2[1] = coldest;
+        return arr2;
     }
 }
