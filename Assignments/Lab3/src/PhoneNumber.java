@@ -1,6 +1,4 @@
-package two;
-
-public class PhoneNumber extends Contact {
+public class PhoneNumber  {
     private int type;
     private int number;
     public PhoneNumber() {

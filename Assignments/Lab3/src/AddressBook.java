@@ -1,7 +1,4 @@
-package two;
 
-import one.Business;
-import one.Person;
 
 import java.util.ArrayList;
 import java.util.List;

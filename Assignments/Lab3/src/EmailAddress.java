@@ -1,5 +1,3 @@
-package two;
-
 public class EmailAddress {
     private int type;
     private String emailAddress;

@@ -1,5 +1,3 @@
-package two;
-
 public class Address {
     private int type ;
     private   String street;
