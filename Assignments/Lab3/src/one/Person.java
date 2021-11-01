@@ -19,6 +19,10 @@ public class Person extends Contacts {
         this.lname = lname;
     }
 
+    public void setLname(String lname) {
+        this.lname = lname;
+    }
+
     public String getLname() {
         return lname;
     }

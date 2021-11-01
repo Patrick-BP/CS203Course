@@ -1,51 +1,34 @@
 package two;
 
 public class Address {
-    private String street;
-    private String City;
+    private int type ;
+    private   String street;
+    private String city;
     private String state;
     private int zip;
-
-    public Address(String street, String city, String state, int zip) {
+    public Address() {
+        this.type = 1;
+        this.street =" 1000 N. 4th St";
+        this.city = "Fairfield";
+        this.state = "Iowa";
+        this.zip = 52557;
+    }
+    public Address(int type, String street, String city, String state, int zip) {
+        this.type = type;
         this.street = street;
-        City = city;
+        this.city = city;
         this.state = state;
         this.zip = zip;
     }
 
-    public String getStreet() {
-        return street;
-    }
-
-    public void setStreet(String street) {
-        this.street = street;
-    }
-
-    public String getCity() {
-        return City;
-    }
-
-    public void setCity(String city) {
-        City = city;
-    }
-
-    public String getState() {
-        return state;
-    }
-
-    public void setState(String state) {
-        this.state = state;
-    }
-
-    public int getZip() {
-        return zip;
-    }
-
-    public void setZip(int zip) {
-        this.zip = zip;
-    }
     @Override
-    public String toString(){
-        return getStreet() +", " +getCity()+", " +getState() + ", " +getZip();
+    public String toString() {
+        return "Address{" +
+                "type=" + type +
+                ", street='" + street + '\'' +
+                ", city='" + city + '\'' +
+                ", state='" + state + '\'' +
+                ", zip=" + zip +
+                '}';
     }
 }

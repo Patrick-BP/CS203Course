@@ -12,7 +12,12 @@ public class Contacts {
     private String note ;
 
     public Contacts(){}
-    public Contacts(String name,List<String> phone, List<String>  email, List<Address> address, String note) {
+
+    public Contacts(String name) {
+        this.name = name;
+    }
+
+    public Contacts(String name, List<String> phone, List<String>  email, List<Address> address, String note) {
         this.name = name;
         this.address = address;
         this.phone = phone;
@@ -26,10 +31,6 @@ public class Contacts {
         this.email = email;
 
     }
-
-
-
-
     public String getName() {
         return name;
     }
