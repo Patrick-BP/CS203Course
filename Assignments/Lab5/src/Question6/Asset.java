@@ -24,7 +24,9 @@ public class Asset {
         a.set(a.indexOf(b), c );
     }
     public void delete( List<Asset> a ,Asset  b ){
-        a.remove(b);
+        if (b) a.remove(b);
+        else System.out.println("it does exit");
+
     }
 
     @Override
