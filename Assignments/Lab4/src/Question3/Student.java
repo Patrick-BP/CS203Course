@@ -30,8 +30,25 @@ public class Student implements Comparable<Student>{
         this.idNumber = idNumber;
     }
 
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "lastName='" + lastName + '\'' +
+                ", idNumber=" + idNumber +
+                '}';
+    }
+
+//    @Override
+//    public int compareTo(Student o) {
+//        if(this.idNumber < o.idNumber) return -1;
+//        if(this.idNumber > o.idNumber) return 1;
+//        return 0;
+//    }
     @Override
     public int compareTo(Student o) {
+        if(this.lastName.charAt(0)< o.lastName.charAt(0)  ) return -1;
+        if(this.lastName.charAt(0) > o.lastName.charAt(0)  ) return 1;
         return 0;
     }
 }
