@@ -1,6 +1,4 @@
-package Question14;
-
-import java.util.Arrays;
+package Question16;
 
 public class WordCount {
     private String sentence;

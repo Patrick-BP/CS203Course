@@ -1,6 +1,6 @@
-package Question8.myutil;
+package Question10.myutil;
 
-public class Person { // make Person class as public and import it in other classes outside the myutil
+public class Person {
     private String name;
     public Person( ) {
         name = "Unknown";

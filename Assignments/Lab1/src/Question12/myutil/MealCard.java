@@ -1,4 +1,4 @@
-package Question10.myutil;
+package Question12.myutil;
 
 public class MealCard {
     private final int DEFAULT_POINT = 100;

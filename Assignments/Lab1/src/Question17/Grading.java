@@ -1,4 +1,4 @@
-package Question15;
+package Question17;
 
 public class Grading {
     private double quize1;

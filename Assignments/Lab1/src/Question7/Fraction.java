@@ -1,21 +1,11 @@
 package Question7;
 
 public class Fraction {
-    private int x;
-    private int y;
-    private double z;
+    private double fractionalNumber;
 
-    public Fraction(int x, int y) {
-        this.x = x;
-        this.y = y;
-
+    public Fraction(int base, double decimal) {
+        fractionalNumber = base + (decimal/10);
     }
 
-    public int compareTo(Fraction f2){
-        if ((this.x/this.y) < (f2.x/ f2.y )) return -1;
-        else if( (this.x/this.y) == (f2.x/ f2.y) ) return 0;
-        else return 1;
-
-    }
 }
 
