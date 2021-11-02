@@ -39,16 +39,12 @@ public class Student implements Comparable<Student>{
                 '}';
     }
 
-//    @Override
-//    public int compareTo(Student o) {
-//        if(this.idNumber < o.idNumber) return -1;
-//        if(this.idNumber > o.idNumber) return 1;
-//        return 0;
-//    }
     @Override
     public int compareTo(Student o) {
-        if(this.lastName.charAt(0)< o.lastName.charAt(0)  ) return -1;
-        if(this.lastName.charAt(0) > o.lastName.charAt(0)  ) return 1;
-        return 0;
+        return this.idNumber - o.idNumber;
     }
+//    @Override
+//    public int compareTo(Student o) {
+//        return this.lastName.compareTo( o.lastName );
+//    }
 }

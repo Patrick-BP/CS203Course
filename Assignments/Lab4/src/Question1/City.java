@@ -37,8 +37,6 @@ public class City implements Comparable<City> {
 
     @Override
     public int compareTo(City o) {
-        if(this.temperature < o.temperature) return -1;
-        if(this.temperature > o.temperature) return 1;
-        return 0;
+        return (int) (this.temperature - o.temperature);
     }
 }

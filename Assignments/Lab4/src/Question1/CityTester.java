@@ -3,19 +3,17 @@ import java.util.*;
 
 public class CityTester {
     public static void main(String[] args) {
-        Comparable city1 = new City("Dallas", 90.5);
-        Comparable city2 = new City("Fairfield", 50.4);
-        Comparable city3 = new City("Nevada", 70.5);
+        City city1 = new City("Dallas", 90.5);
+        City city2 = new City("Fairfield", 50.4);
+        City city3 = new City("Nevada", 70.5);
 
+        City[] citiesList = new City[3];
+        citiesList[0] = city1;
+        citiesList[1] = city2;
+        citiesList[2] = city3;
 
-
-        List<Comparable> cities = new ArrayList<>();
-        cities.add(city1);
-        cities.add(city2);
-        cities.add(city3);
-
-        Collections.sort(cities);
-        System.out.println(cities);
+        Arrays.sort(citiesList);
+        System.out.println(Arrays.toString(citiesList));
 
 
     }
