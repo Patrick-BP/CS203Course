@@ -1,12 +1,13 @@
 public class PhoneNumber  {
     private int type;
-    private int number;
+    private long number;
+
     public PhoneNumber() {
-        this.type = 1;
-        this.number = 469543678;
+        type = 0;
+        number = 4690000000L;
     }
 
-    public PhoneNumber(int type, int number) {
+    public PhoneNumber(int type, long number) {
         this.type = type;
         this.number = number;
     }

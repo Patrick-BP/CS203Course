@@ -4,16 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class AddressBook {
-    List<Contact>  personalContacts = new ArrayList<>();
-    List<Contact>  businessContacts = new ArrayList<>();
+    List<Contact>  personalContacts ;
+    List<Contact>  businessContacts ;
 
     public AddressBook() {
-
-    }
-
-    public AddressBook(List<Contact> personalContacts, List<Contact> businessContacts) {
-        this.personalContacts = personalContacts;
-        this.businessContacts = businessContacts;
+        personalContacts = new ArrayList<>();
+        businessContacts = new ArrayList<>();
     }
 
     public List<Contact> getPersonalContacts() {
@@ -24,29 +20,21 @@ public class AddressBook {
         return businessContacts;
     }
 
-    public boolean addPersonalContact(Contact cont){
+
+
+    void addPersonalContact(Contact cont){
         personalContacts.add(cont);
-        return true;
     }
-    public boolean addBusinessContact(Contact cont){
+
+    void addBusinessContact(Contact cont){
         businessContacts.add(cont);
-        return true;
     }
 
-    public boolean deletePersonalContact(Contact cont){
-
+  void deletePersonalContact(Contact cont){
             personalContacts.remove(cont);
-
-
-
-        return true;
     }
-    public boolean deleteBusinessContact(Contact cont){
-
+    void deleteBusinessContact(Contact cont){
             businessContacts.remove(cont);
-
-
-        return true;
     }
 
     @Override
