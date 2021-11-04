@@ -62,7 +62,7 @@ public class Employee {
         if(obj == null)return false ;
         if(!(obj instanceof Employee)) return false;
         Employee e = (Employee) obj;
-        return position == e.position;
+        return position.equals(e.position);
     }
 
     public String printEmployeeDetails(){
