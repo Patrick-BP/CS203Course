@@ -4,23 +4,22 @@ import java.util.Comparator;
 import java.util.List;
 
 public class JavaTube {
+    class SortVideosByTitle implements Comparator<Video> {
+        @Override
+        public int compare(Video o1, Video o2) {
+            return o1.getTitle().compareTo(o2.getTitle());
+        }
+    }
+    class SortVideosByViews implements Comparator<Video> {
+        @Override
+        public int compare(Video o1, Video o2) {
+            return o1.getViews() - o2.getViews();
+        }
+    }
+
+
+
     public static void main(String[] args) {
-
-        class SortVideosByTitle implements Comparator<Video> {
-            @Override
-            public int compare(Video o1, Video o2) {
-                return o1.getTitle().compareTo(o2.getTitle());
-            }
-        }
-        class SortVideosByViews implements Comparator<Video> {
-            @Override
-            public int compare(Video o1, Video o2) {
-                return o1.getViews() - o2.getViews();
-            }
-        }
-
-
-
 
         CookingVideo cv1 = new CookingVideo("pie-video", 30, 345, 567, 15,
                 new Recipe("pie", "ing1,ing2,ing3", "mix with water", 45, 50, 7));
@@ -49,11 +48,13 @@ public class JavaTube {
         videoPrinter(allVideos);
 
         System.out.println("\n============== Sort the allvideos array By title using inner class ==========================\n");
-        Arrays.sort(allVideos, new SortVideosByTitle());
+        JavaTube jt = new JavaTube();
+        Arrays.sort(allVideos, jt.new SortVideosByTitle());
         videoPrinter(allVideos);
 
         System.out.println("\n============== Sort the allvideos arrayBy Views  using inner class ==========================\n");
-        Arrays.sort(allVideos, new SortVideosByViews());
+
+        Arrays.sort(allVideos, jt.new SortVideosByViews());
         videoPrinter(allVideos);
 
 
@@ -76,7 +77,13 @@ public class JavaTube {
 
     }
 
+public static void sortCookingVideoByServingSizeDescending(new Comparable<CookingVideo>(){
 
+    @Override
+    public int compare(Video o1) {
+        return o1.getTitle().compareTo(o2.getTitle());
+    }
+});
 
 
 
