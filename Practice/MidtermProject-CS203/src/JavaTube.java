@@ -20,6 +20,8 @@ public class JavaTube {
         }
 
 
+
+
         CookingVideo cv1 = new CookingVideo("pie-video", 30, 345, 567, 15,
                 new Recipe("pie", "ing1,ing2,ing3", "mix with water", 45, 50, 7));
         CookingVideo cv2 = new CookingVideo("rice-video", 30, 100, 50, 15,
@@ -66,36 +68,17 @@ public class JavaTube {
         System.out.println("\n============== printAllCookingRecipes ==========================\n");
         printAllCookingRecipes(cookingVideos);
 
-//        Video video1 = new Video();
-//        Video video2 = new Video("sdf",45,456,333,30);
-//        GamingVideo gamingVideo1 = new GamingVideo();
-//        CookingVideo cookingVideo1 = new CookingVideo();
-//        Recipe recipe1 = new Recipe();
-//
-//
-//
-//        //System.out.println(cookingVideo1.getCookingRecipe(recipe1));
-//        cookingVideo1.printRecipe();
-//
-//
-//        Video[] videoArray  = {video1,video2};
-//        JavaTube jt = new JavaTube();
-//        Arrays.sort(videoArray,  jt.new SortVideosByTitle());
-//
-//        System.out.println(Arrays.toString(videoArray));
 
+    }
+
+
+    public void sortCookingVideoByIngredientList(){
 
     }
 
 
 
 
-
-
-    void sortCookingVideoByingredientList() {
-        CookingVideo cv = new CookingVideo();
-        //cv.getIngredientList(r);
-    }
 
     void sortCookingVideoByIngredientList(Recipe r) {
 

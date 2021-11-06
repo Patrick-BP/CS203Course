@@ -1,10 +1,10 @@
-public  class Recipe implements Cloneable{
-    private String recipeName;
-    private String ingredients;
-    private String instructions;
-    private int prepTime;
-    private int cookingTime;
-    private int serving;
+public  final class Recipe {
+    private final String recipeName;
+    private  final String ingredients;
+    private final String instructions;
+    private final int prepTime;
+    private final int cookingTime;
+    private final int serving;
 
     public Recipe() {
         this.recipeName = "unknown";
@@ -25,52 +25,33 @@ public  class Recipe implements Cloneable{
         this.serving = serving;
     }
 
+
+
     public String getRecipeName() {
         return recipeName;
-    }
-
-    public void setRecipeName(String recipeName) {
-        this.recipeName = recipeName;
     }
 
     public String getIngredients() {
         return ingredients;
     }
 
-    public void setIngredients(String ingredients) {
-        this.ingredients = ingredients;
-    }
-
     public String getInstructions() {
         return instructions;
-    }
-
-    public void setInstructions(String instructions) {
-        this.instructions = instructions;
     }
 
     public int getPrepTime() {
         return prepTime;
     }
 
-    public void setPrepTime(int prepTime) {
-        this.prepTime = prepTime;
-    }
+
 
     public int getCookingTime() {
         return cookingTime;
     }
 
-    public void setCookingTime(int cookingTime) {
-        this.cookingTime = cookingTime;
-    }
 
     public int getServing() {
         return serving;
-    }
-
-    public void setServing(int serving) {
-        this.serving = serving;
     }
 
     @Override
@@ -85,8 +66,6 @@ public  class Recipe implements Cloneable{
                 '}';
     }
 
-    @Override
-    protected Object clone() throws CloneNotSupportedException {
-        return super.clone();
-    }
+
+
 }
