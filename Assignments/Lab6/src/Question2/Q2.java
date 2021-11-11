@@ -19,7 +19,7 @@ public class Q2 {
         }
         try {
             FileWriter writeFile = new FileWriter(filePath);
-            writeFile.write("10 4 7 8 10 34 11 10 15 6 10");
+            writeFile.write("10 4 7 8 10 34 11 10 15 6 10 45");
             writeFile.close();
         }catch(IOException e){
             System.out.println("there was an error");
