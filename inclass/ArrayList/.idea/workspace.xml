@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="406d41eb-6adc-4872-977c-401c55762400" name="Changes" comment="" />
+    <list default="true" id="406d41eb-6adc-4872-977c-401c55762400" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../Assignments/MidTermProject_CS203_Orange/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Practice/Lesson1-Arrays/src/CustomArray/CustomArrays.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Practice/Lesson1-Arrays/src/CustomArray/Videos.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Practice/Lesson1-Arrays/src/CustomArray/test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Practice/Lesson1-Arrays/src/InnerClasses/Outer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Practice/Lesson1-Arrays/src/InnerClasses/test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,7 +28,29 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../InterfacesAndAbstractClasses" />
+  </component>
+  <component name="RunManager" selected="Application.CollectionTester">
+    <configuration name="ArrayListTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ArrayListTest" />
+      <module name="ArrayList" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CollectionTester" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="CollectionTester" />
+      <module name="ArrayList" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.CollectionTester" />
+        <item itemvalue="Application.ArrayListTest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -31,6 +61,7 @@
       <option name="presentableId" value="Default" />
       <updated>1635623809799</updated>
       <workItem from="1635623811228" duration="61000" />
+      <workItem from="1636327505576" duration="2521000" />
     </task>
     <servers />
   </component>

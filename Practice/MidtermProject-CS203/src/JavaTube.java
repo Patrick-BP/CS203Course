@@ -77,13 +77,7 @@ public class JavaTube {
 
     }
 
-public static void sortCookingVideoByServingSizeDescending(new Comparable<CookingVideo>(){
-
-    @Override
-    public int compare(Video o1) {
-        return o1.getTitle().compareTo(o2.getTitle());
-    }
-});
+public static void sortCookingVideoByServingSizeDescending(){}
 
 
 
