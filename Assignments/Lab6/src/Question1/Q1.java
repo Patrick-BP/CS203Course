@@ -1,50 +1,49 @@
 package Question1;
 
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.util.Scanner;
 
 public class Q1 {
     public static void main(String[] args) {
-        String girlNamesFilePath = "D:\\MIU\\CS203\\CS203Course\\Assignments\\Lab6\\Files\\girlnames.text";
-        String boyNamesFilePath = "D:\\MIU\\CS203\\CS203Course\\Assignments\\Lab6\\Files\\boynames";
+        String girlNamesFilePath = "/Users/bp/Desktop/MIU/CS203Course/Assignments/Lab6/Files/girlnames.text";
+        String boyNamesFilePath = "/Users/bp/Desktop/MIU/CS203Course/Assignments/Lab6/Files/boynames.text";
         String girldata="";
         String boydata="";
-        int counter =0;
-        String x="10";
+        int index =0;
+        Scanner sc =new Scanner(System.in);
+        System.out.println("enter a mame ");
+        String name = sc.nextLine();
 
 
-        try {
-            File readfilegirl = new File(girlNamesFilePath);
-            Scanner girlreader = new Scanner(readfilegirl);
-            while(girlreader.hasNextLine()){
-                girldata  = girlreader.nextLine();
-                System.out.println(girldata);
-            }
-        }catch (IOException e){
-            e.printStackTrace();
-        }
+
         try {
             File readfileboy = new File(girlNamesFilePath);
-            Scanner boyreader = new Scanner(readfileboy);
-            while(boyreader.hasNextLine()){
-                boydata  = boyreader.nextLine();
-                System.out.println(boydata);
+            if(readfileboy.exists()&&readfileboy.canRead()) {
+                FileReader fReader = new FileReader(readfileboy);
+                BufferedReader bReader = new BufferedReader(fReader);
+                String boynames = bReader.readLine();
             }
+
         }catch (IOException e){
             e.printStackTrace();
         }
+        //loop through girl names
+        System.out.println();
+        //loop through boy names
+        System.out.println();
+    }
 
+    public static String readFile(String ){
+        try {
+            File readfilegirl = new File(girlNamesFilePath);
+            if(readfilegirl.exists()&&readfilegirl.canRead()) {
+                FileReader fReader = new FileReader(readfilegirl);
+                BufferedReader bReader = new BufferedReader(fReader);
+                String girlnames = bReader.readLine();
+            }
 
-
-
-        //String[] str = data.split(" ");
-//        for (int i=0; i < str.length; i++) {
-//            if(str[i].equals(x)) counter++;
-//        }
-//        System.out.println(counter);
-   // }
-
+        }catch (IOException e){
+            e.printStackTrace();
+        }
     }
 }

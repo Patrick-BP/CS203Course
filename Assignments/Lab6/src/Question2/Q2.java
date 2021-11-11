@@ -1,13 +1,11 @@
 package Question2;
 
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.util.Scanner;
 
 public class Q2 {
     public static void main(String[] args) {
-        String filePath = "D:\\MIU\\CS203\\CS203Course\\Assignments\\Lab6\\Files\\Q2File.text";
+        String filePath = "/Users/bp/Desktop/MIU/CS203Course/Assignments/Lab6/Files/Q2File.txt";
         String data="";
         int counter =0;
         String x="10";
@@ -15,11 +13,14 @@ public class Q2 {
             File file = new File(filePath);
             if (file.createNewFile()) System.out.println("your file has been created ");
         }catch (IOException e){
+
             e.printStackTrace();
         }
         try {
             FileWriter writeFile = new FileWriter(filePath);
-            writeFile.write("10 4 7 8 10 34 11 10 15 6 10 45");
+            BufferedWriter bWriter = new BufferedWriter(writeFile);
+            bWriter.write("10 4 7 8 10 34 11 10 15 6 10 45");
+            bWriter.close();
             writeFile.close();
         }catch(IOException e){
             System.out.println("there was an error");
@@ -27,11 +28,14 @@ public class Q2 {
 
         }
         try {
-            File readfile = new File(filePath);
-            Scanner myreader = new Scanner(readfile);
-            while(myreader.hasNextLine()){
-               data  = myreader.nextLine();
+            File myfile = new File(filePath);
+            if(myfile.exists() && myfile.canRead()) {
+                FileReader readfile = new FileReader(myfile);
+                BufferedReader bReader = new BufferedReader(readfile);
+                data = bReader.readLine();
                 System.out.println(data);
+                readfile.close();
+                bReader.close();
             }
         }catch (IOException e){
             e.printStackTrace();
