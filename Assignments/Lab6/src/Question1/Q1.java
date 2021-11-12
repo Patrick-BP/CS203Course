@@ -1,10 +1,12 @@
 package Question1;
 
 import java.io.*;
-import java.util.Arrays;
-import java.util.Scanner;
+import java.util.*;
 
-public class Q1 {
+public class Q1{
+     String[] nameBoys = new String[1000], nameGirls = new String[1000];
+     int[] numBoys = new int[1000], numGirls = new int[1000];
+
     public static void main(String[] args) {
         String girlNamesFilePath = "/Users/bp/Desktop/MIU/CS203Course/Assignments/Lab6/Files/girlnames.txt";
         String boyNamesFilePath = "/Users/bp/Desktop/MIU/CS203Course/Assignments/Lab6/Files/boynames.txt";
@@ -21,27 +23,38 @@ public class Q1 {
         else System.out.println(name + " is ranked not ranked amoung boys with "+fileSize(boyNamesFilePath)+" namings");
     }
     public static int findRank(String path, String name) {
-        String names = "";
-        int index = 0;
+        String[] names = new String[1000];
+        int[] total = new int[1000];
+
         try {
+            String line = null;
+            int countNum = 0;
             File readfile = new File(path);
             if (readfile.exists() && readfile.canRead()) {
                 FileReader fReader = new FileReader(readfile);
                 BufferedReader bReader = new BufferedReader(fReader);
-                names = bReader.readLine();
-                String[] namesList = names.split(" ");
-                bReader.close();
-                fReader.close();
-                for (int i = 0; i < namesList.length; i++) {
-                    if (namesList[i].equalsIgnoreCase(name)) {
-                        index = i + 1;
-                    }
+                while((line =bReader.readLine()) !=null){
+                    String[] data= line.split(" ");
+                    names[countNum] = data[0];
+                    total[countNum] = Integer.parseInt(data[1]);
+                    countNum++;
+
+
+                }
+                if (path == "/Users/bp/Desktop/MIU/CS203Course/Assignments/Lab6/Files/boynames.txt")
+                {
+                    this.nameBoys = names;
+                    this.numBoys = total;
+                } else
+                {
+                    this.nameGirls = names;
+                    this.numGirls = total;
                 }
             } else System.out.println("cant read the file");
         } catch (IOException e) {
             e.printStackTrace();
         }
-        return index;
+        return 0;
     }
     public static int fileSize(String path) {
         String names = "";
@@ -63,4 +76,6 @@ public class Q1 {
             return size;
 
     }
+
+
 }
