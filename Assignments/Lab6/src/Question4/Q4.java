@@ -1,21 +1,47 @@
 package Question4;
 
+import java.io.*;
+import java.util.Scanner;
+
 public class Q4 {
     public static void main(String[] args) {
-        String str = "DAD,RISK,JAVA,MALAYALAM,RACECAR,RADAR,ROTOR,REFER,SEDES,SOLOS,COURSE,STATS,TOROT,TENET,MACHINE,VIRTUAL,STUDENT,PULLUP,PROGRAMME,CORE";
-        String[] str2 = str.split(",");
-        String str4 = "";
-        int counter=0;
-
-        for (String e: str2) {
-            for(int i=e.length()-1; i>=0; i--){
-
-                str4 += e.charAt(i);
+        String filePath = "/Users/bp/Desktop/MIU/CS203Course/Assignments/Lab6/Files/Q4File.txt";
+        try {
+            File file = new File(filePath);
+            if (file.createNewFile()) {
+                System.out.println("your file has been created");
             }
-            if (str4.equals(e))counter++;
-            str4="";
+        }catch (IOException e){
+            System.out.println("there was an error");
         }
-        System.out.println(counter);
-    }
 
+        try{
+            File file = new File(filePath);
+            FileReader fready = new FileReader(file);
+            BufferedReader bready = new BufferedReader(fready);
+            String data = bready.readLine();
+            System.out.println(data);
+
+        }catch (IOException e){
+            System.out.println("there was an error");
+        }
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter your advice");
+        String input = sc.nextLine();
+
+
+        try {
+            FileWriter writeFile = new FileWriter(filePath);
+            BufferedWriter bWriter = new BufferedWriter(writeFile);
+            bWriter.write(input);
+            bWriter.close();
+            writeFile.close();
+        }catch(IOException e){
+            System.out.println("there was an error");
+            e.printStackTrace();
+
+        }
+
+    }
 }
