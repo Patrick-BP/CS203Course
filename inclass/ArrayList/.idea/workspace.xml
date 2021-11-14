@@ -2,13 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="406d41eb-6adc-4872-977c-401c55762400" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../Assignments/MidTermProject_CS203_Orange/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Practice/Lesson1-Arrays/src/CustomArray/CustomArrays.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Practice/Lesson1-Arrays/src/CustomArray/Videos.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Practice/Lesson1-Arrays/src/CustomArray/test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Practice/Lesson1-Arrays/src/InnerClasses/Outer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Practice/Lesson1-Arrays/src/InnerClasses/test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ArrayList.iml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,7 +28,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../InterfacesAndAbstractClasses" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Comparisons" />
   </component>
   <component name="RunManager" selected="Application.CollectionTester">
     <configuration name="ArrayListTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -62,6 +62,7 @@
       <updated>1635623809799</updated>
       <workItem from="1635623811228" duration="61000" />
       <workItem from="1636327505576" duration="2521000" />
+      <workItem from="1636874252737" duration="131000" />
     </task>
     <servers />
   </component>
