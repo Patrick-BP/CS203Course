@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="cc050866-4dd4-4317-949b-a24d1d8aa687" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../Practice/JavaGUI/JavaGUI.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Comparisons/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Comparisons/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Comparisons/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Comparisons/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Comparisons/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Comparisons/Comparisons.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GUI/.classpath" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GUI/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GUI/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GUI/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GUI/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GUI/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GUI/.project" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GUI/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GUI/GUI.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GUI/bin/CarGUI/Car.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GUI/bin/CarGUI/Program$1$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GUI/bin/CarGUI/Program$1$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GUI/bin/CarGUI/Program$1$3.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GUI/bin/CarGUI/Program$1$4.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GUI/bin/CarGUI/Program$1$5.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GUI/bin/CarGUI/Program$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GUI/bin/CarGUI/Program.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GUI/bin/CarGUI/ShowCarsWindow.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GUI/bin/CarGUI/addCarWindow.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GUI/bin/SuperApp$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GUI/bin/SuperApp$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GUI/bin/SuperApp.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GUI/src/CarGUI/Car.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GUI/src/CarGUI/Program.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GUI/src/CarGUI/ShowCarsWindow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GUI/src/CarGUI/addCarWindow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GUI/src/SuperApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Inheritance/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Inheritance/.idea/Inheritance.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Inheritance/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Inheritance/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Inheritance/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Inheritance/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Quiz2/.classpath" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Quiz2/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Quiz2/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Quiz2/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Quiz2/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Quiz2/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Quiz2/.project" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Quiz2/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Quiz2/Quiz2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Quiz2/bin/longeststring/LongestString.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Quiz2/bin/pets/Pet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Quiz2/bin/pets/PetTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Quiz2/src/longeststring/LongestString.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Quiz2/src/pets/Pet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Quiz2/src/pets/PetTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.classpath" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.project" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/BufferedWriter/BufferedRead_Write.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/Car.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/Program.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/SavingObjectsToFile/Car.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/SavingObjectsToFile/ScannerTestProgram.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/ScannerTest/Car.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/ScannerTest/ScannerTestProgram.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/BufferedWriter/BufferedRead_Write.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Car.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Program.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SavingObjectsToFile/Car.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SavingObjectsToFile/ScannerTestProgram.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ScannerTest/Car.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ScannerTest/ScannerTestProgram.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="20tr36GF2EudENUOQ6zmSmUPm0Y" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../StaticKeyword" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cc050866-4dd4-4317-949b-a24d1d8aa687" name="Changes" comment="" />
+      <created>1636874522487</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1636874522487</updated>
+      <workItem from="1636874523941" duration="24000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
