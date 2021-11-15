@@ -134,7 +134,7 @@ public class AddBook {
 		
 		bookListtextArea = new JTextArea();
 		bookListtextArea.setEditable(false);
-		bookListtextArea.setBounds(491, 41, 322, 372);
+		bookListtextArea.setBounds(379, 11, 466, 428);
 		addbookframe.getContentPane().add(bookListtextArea);
 	}
 }

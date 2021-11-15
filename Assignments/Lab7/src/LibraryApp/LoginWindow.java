@@ -17,14 +17,7 @@ public class LoginWindow {
 	public JButton loginButton = new JButton("Login");
 	 
 
-	/**
-	 * Launch the application.
-	 */
 	
-
-	/**
-	 * Create the application.
-	 */
 	public LoginWindow() {
 		initialize();
 	}

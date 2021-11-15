@@ -46,21 +46,7 @@ public class Main {
 			}
 			}
 
-			File bookfile =new File("D:\\MIU\\CS203Course\\Assignments\\Lab7\\files\\books.txt");
-
-				try {
-					FileOutputStream fos =new FileOutputStream(bookfile);
-					ObjectOutputStream oos = new ObjectOutputStream(fos);
-					oos.writeObject(booklist);
-					oos.close();
-					fos.close();
-
-
-				} catch (IOException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
-				}
-
+			
 			
 
 
@@ -120,6 +106,37 @@ public class Main {
 
 							Book newBook = new Book(addBook.booknametextField.getText(), addBook.bookPublishertextField.getText(), id,qty,addBook.bookCategorycomboBox.getToolTipText(),addBook.bookgenretextField.getText());
 							booklist.add(newBook);
+							
+							
+							File bookfile =new File("D:\\MIU\\CS203Course\\Assignments\\Lab7\\files\\books.txt");
+
+							try {
+								FileOutputStream fos =new FileOutputStream(bookfile);
+								ObjectOutputStream oos = new ObjectOutputStream(fos);
+								oos.writeObject(booklist);
+							
+
+
+							} catch (IOException e1) {
+								// TODO Auto-generated catch block
+								e1.printStackTrace();
+							}
+
+							
+							try {
+								FileInputStream fis =new FileInputStream(bookfile);
+								ObjectInputStream oos = new ObjectInputStream(fis);
+								booklist = (List<Book>) oos.readObject();
+
+
+
+
+							} catch (IOException | ClassNotFoundException e1) {
+								// TODO Auto-generated catch block
+								e1.printStackTrace();
+							}
+							
+							
 
 							addBook.bookeditiontextField.setText("");
 							addBook.bookPublishertextField.setText("");
@@ -128,14 +145,17 @@ public class Main {
 							addBook.booknametextField.setText("");
 							addBook.qtytextField.setText("");
 
+							
+
+							JOptionPane.showMessageDialog(addBook.addbookButton, "Added!");
+							
+							
 							String res = "";
 							for(Book c : booklist) {
 								res += c + "\n";
 							}
 
 							addBook.bookListtextArea.setText(res);
-
-							JOptionPane.showMessageDialog(addBook.addbookButton, "Added!");
 
 
 						}
@@ -180,6 +200,8 @@ public class Main {
 							librarianWindow.librarianWindowframe.setVisible(false);
 							addBook.addbookframe.setVisible(true);
 							
+							
+							
 						}
 					});
 					
@@ -206,18 +228,7 @@ public class Main {
 						}
 					});
 					
-					try {
-						FileInputStream fis =new FileInputStream(bookfile);
-						ObjectInputStream oos = new ObjectInputStream(fis);
-						booklist = (List<Book>) oos.readObject();
-
-
-
-
-					} catch (IOException | ClassNotFoundException e1) {
-						// TODO Auto-generated catch block
-						e1.printStackTrace();
-					}
+					
 
 					
 				}

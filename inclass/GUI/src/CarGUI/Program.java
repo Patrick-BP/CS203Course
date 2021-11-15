@@ -21,7 +21,7 @@ public class Program {
 	
 	public static void main(String[] args) {
 		
-		File f = new File("C:\\Users\\611041\\Desktop\\cars.txt");
+		File f = new File("D:\\MIU\\CS203Course\\inclass\\GUI\\file\\cars.txt");
 		if(f.isFile() && f.canRead()) {
 			try {
 			FileInputStream s = new FileInputStream(f);

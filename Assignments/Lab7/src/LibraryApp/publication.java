@@ -39,6 +39,6 @@ public class publication {
 
 	@Override
 	public String toString() {
-		return "name='" + name + ", publisher='" + publisher + '\'' + ", id=" + id + ", qty=" + qty + ", category='" + category ;
+		return "id: " + id +"name: " + name + ", publisher: " + publisher + ", category: " + category +  ", qty: " + qty  ;
 	}
 }
