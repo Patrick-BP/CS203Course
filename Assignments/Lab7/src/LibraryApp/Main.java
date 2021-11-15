@@ -11,6 +11,8 @@ import java.util.List;
 
 import javax.swing.JOptionPane;
 
+import org.w3c.dom.ls.LSOutput;
+
 
 
 public class Main {
@@ -59,27 +61,7 @@ public class Main {
 					e1.printStackTrace();
 				}
 
-			try {
-				FileInputStream fis =new FileInputStream(bookfile);
-				ObjectInputStream oos = new ObjectInputStream(fis);
-				booklist = (List<Book>) oos.readObject();
-
-				String res = "";
-				for(Book c : booklist) {
-					res += c + "\n";
-				}
-
-				addBook.bookListtextArea.setText(res);
-
-
-			} catch (IOException | ClassNotFoundException e1) {
-				// TODO Auto-generated catch block
-				e1.printStackTrace();
-			}
-
-
-
-
+			
 
 
 			
@@ -146,7 +128,16 @@ public class Main {
 							addBook.booknametextField.setText("");
 							addBook.qtytextField.setText("");
 
+							String res = "";
+							for(Book c : booklist) {
+								res += c + "\n";
+							}
+
+							addBook.bookListtextArea.setText(res);
+
 							JOptionPane.showMessageDialog(addBook.addbookButton, "Added!");
+
+
 						}
 					});
 				
@@ -214,6 +205,20 @@ public class Main {
 							
 						}
 					});
+					
+					try {
+						FileInputStream fis =new FileInputStream(bookfile);
+						ObjectInputStream oos = new ObjectInputStream(fis);
+						booklist = (List<Book>) oos.readObject();
+
+
+
+
+					} catch (IOException | ClassNotFoundException e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					}
+
 					
 				}
 			});
