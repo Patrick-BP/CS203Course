@@ -10,7 +10,8 @@ public class LibrarianWindow {
 
 	public JFrame librarianWindowframe;
 	public JButton exitButton = new JButton("Exit");
-
+	public JButton addPublicationsButton = new JButton("Add publications");
+	public JButton addUserButton = new JButton("Add new Member");
 	/**
 	 * Launch the application.
 	 */
@@ -34,17 +35,17 @@ public class LibrarianWindow {
 		librarianWindowframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		librarianWindowframe.getContentPane().setLayout(null);
 		
-		JButton addPublicationsButton = new JButton("Add publications");
+		
 		addPublicationsButton.setBounds(32, 48, 133, 23);
 		librarianWindowframe.getContentPane().add(addPublicationsButton);
 		
-		JButton addUserButton = new JButton("Add new Member");
+		
 		addUserButton.setBounds(192, 48, 133, 23);
 		librarianWindowframe.getContentPane().add(addUserButton);
 		
-		JButton addLoanInfoButton = new JButton("Add Loans");
-		addLoanInfoButton.setBounds(344, 48, 133, 23);
-		librarianWindowframe.getContentPane().add(addLoanInfoButton);
+		JButton bookIssueButton = new JButton("Book issue");
+		bookIssueButton.setBounds(344, 48, 133, 23);
+		librarianWindowframe.getContentPane().add(bookIssueButton);
 		
 		JButton loanhistoryButton = new JButton("Loan History");
 		loanhistoryButton.setBounds(500, 48, 133, 23);
