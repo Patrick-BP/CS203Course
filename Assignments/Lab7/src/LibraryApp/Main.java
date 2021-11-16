@@ -27,6 +27,7 @@ public class Main {
 		public static void main(String[] args) {
 		
 			File file =new File("D:\\MIU\\CS203Course\\Assignments\\Lab7\\files\\librarian.txt");
+			File bookfile =new File("D:\\MIU\\CS203Course\\Assignments\\Lab7\\files\\books.txt");
 			if(file.isFile() && file.canRead()) {
 			try {
 				FileReader fReader = new FileReader(file);
@@ -76,6 +77,7 @@ public class Main {
 
 					//add book button (addbookwindow)
 					addBook.addbookButton.addActionListener(new ActionListener() {
+						@SuppressWarnings("unchecked")
 						@Override
 						public void actionPerformed(ActionEvent e) {
 
@@ -104,37 +106,14 @@ public class Main {
 								return;
 							}
 
-							Book newBook = new Book(addBook.booknametextField.getText(), addBook.bookPublishertextField.getText(), id,qty,addBook.bookCategorycomboBox.getToolTipText(),addBook.bookgenretextField.getText());
+							Book newBook = new Book(addBook.booknametextField.getText(), addBook.bookPublishertextField.getText(), id,qty,addBook.bookCategorycomboBox.getSelectedItem().toString(),addBook.bookgenretextField.getText());
 							booklist.add(newBook);
 							
 							
-							File bookfile =new File("D:\\MIU\\CS203Course\\Assignments\\Lab7\\files\\books.txt");
-
-							try {
-								FileOutputStream fos =new FileOutputStream(bookfile);
-								ObjectOutputStream oos = new ObjectOutputStream(fos);
-								oos.writeObject(booklist);
 							
 
-
-							} catch (IOException e1) {
-								// TODO Auto-generated catch block
-								e1.printStackTrace();
-							}
-
 							
-							try {
-								FileInputStream fis =new FileInputStream(bookfile);
-								ObjectInputStream oos = new ObjectInputStream(fis);
-								booklist = (List<Book>) oos.readObject();
-
-
-
-
-							} catch (IOException | ClassNotFoundException e1) {
-								// TODO Auto-generated catch block
-								e1.printStackTrace();
-							}
+							
 							
 							
 
@@ -148,7 +127,19 @@ public class Main {
 							
 
 							JOptionPane.showMessageDialog(addBook.addbookButton, "Added!");
-							
+							try {
+								FileInputStream fis =new FileInputStream(bookfile);
+								ObjectInputStream oos = new ObjectInputStream(fis);
+								booklist = ((List<Book>) oos.readObject());
+
+
+								oos.close();
+								fis.close();
+
+							} catch (IOException | ClassNotFoundException e1) {
+								// TODO Auto-generated catch block
+								e1.printStackTrace();
+							}
 							
 							String res = "";
 							for(Book c : booklist) {
@@ -232,12 +223,28 @@ public class Main {
 
 					
 				}
+				
+				public static void closeApp() {
+					
+					File bookfile =new File("D:\\MIU\\CS203Course\\Assignments\\Lab7\\files\\books.txt");
+					try {
+						FileOutputStream fos =new FileOutputStream(bookfile);
+						ObjectOutputStream oos = new ObjectOutputStream(fos);
+						oos.writeObject(booklist);
+					
+							oos.close();
+							fos.close();
+
+					} catch (IOException e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					}
+					System.exit(0);
+				
+				}
 			});
 		}
 
-	public static void closeApp() {
-		System.exit(0);
 	
-	}
 
 }
