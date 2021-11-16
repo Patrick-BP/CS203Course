@@ -1,6 +1,6 @@
 import java.io.Serializable;
 
-public class Car implements Serializable {
+public class Car implements java.io.Serializable {
 	
 	private String make;
 	private String model;
@@ -32,7 +32,11 @@ public class Car implements Serializable {
 	}
 	@Override
 	public String toString() {
-		return "make: " + make + ",   model: " + model + ",   year: " + year + ",   weight: " + weight + ",   color: " + color;
+		return "make:                          " + make +
+				"\nmodel:                      " + model +
+				"\nyear:                       " + year +
+				"\nweight:                     " + weight +
+				"\ncolor:                      " + color;
 	}
 	
 	

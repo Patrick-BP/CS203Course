@@ -16,6 +16,8 @@ public class Program {
 
 	public static void main(String[] args) {
 
+
+
 		File file = new File("/Users/bp/Desktop/MIU/CS203Course/Practice/CarEmporium/files/cars.text");
 
 
@@ -53,9 +55,9 @@ public class Program {
 						for (Car c: cars) {
 							res +=c+"\n";
 						}
-						carsDisplayWindow.carsDisplytextArea.setText(res);
+						carsDisplayWindow.carsDisplaytextArea.setText(res);
 
-
+						System.out.println(res);
 					}
 				});
 
@@ -110,10 +112,16 @@ public class Program {
 //							JOptionPane.showMessageDialog(carEntryWindow.submitButton,"year must be a numeric value");
 //						}
 
-						Car gascar = new GasCar(carEntryWindow.maketextField.getText(),carEntryWindow.modeltextField.getText(),year,weight,carEntryWindow.colorcomboBox.getSelectedItem().toString(),tanksise,carEntryWindow.fuelTypetextField.getText());
-						Car elecCar = new CarEletric(carEntryWindow.maketextField.getText(),carEntryWindow.modeltextField.getText(),year,weight,carEntryWindow.colorcomboBox.getSelectedItem().toString(),batterysize,carEntryWindow.batteryTypetextField.getText());
-						cars.add(gascar);
-						cars.add(elecCar);
+						if(carEntryWindow.ElectricRadioButton.isSelected()) {
+							Car car = new CarEletric(carEntryWindow.maketextField.getText(), carEntryWindow.modeltextField.getText(), year, weight, carEntryWindow.colorcomboBox.getSelectedItem().toString(), batterysize, carEntryWindow.batteryTypetextField.getText());
+							cars.add(car);
+							}else {
+							Car car = new GasCar(carEntryWindow.maketextField.getText(), carEntryWindow.modeltextField.getText(), year, weight, carEntryWindow.colorcomboBox.getSelectedItem().toString(), tanksise, carEntryWindow.fuelTypetextField.getText());
+							cars.add(car);
+						}
+
+
+
 
 
 						JOptionPane.showMessageDialog(carEntryWindow.submitButton, "Added successfully");
@@ -203,6 +211,9 @@ public class Program {
 						FileInputStream fis = new FileInputStream(file);
 						ObjectInputStream ois = new ObjectInputStream(fis);
 						cars = (List<Car>)ois.readObject();
+						
+						ois.close();
+						fis.close();
 						} catch (IOException ex) {
 							ex.printStackTrace();
 						} catch (ClassNotFoundException classNotFoundException) {
@@ -221,6 +232,9 @@ public class Program {
 					FileOutputStream fos = new FileOutputStream(file);
 					ObjectOutputStream oos = new ObjectOutputStream(fos);
 					oos.writeObject(cars);
+					
+					oos.close();
+					fos.close();
 				}catch (Exception w){
 					w.printStackTrace();
 				}

@@ -3,14 +3,15 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JButton;
 import javax.swing.JTextArea;
+import javax.swing.JScrollPane;
+import java.awt.TextArea;
 
 public class CarsDisplayWindow {
 
 	public JFrame CarDisplayframe;
 	public JButton returnButton = new JButton("Return");
-	public JTextArea carsDisplytextArea = new JTextArea();
 	public JButton exitButton = new JButton("Exit");
-
+	public TextArea carsDisplaytextArea = new TextArea();
 	/**
 	 * Launch the application.
 	 */
@@ -36,13 +37,13 @@ public class CarsDisplayWindow {
 
 		returnButton.setBounds(6, 169, 117, 29);
 		CarDisplayframe.getContentPane().add(returnButton);
-		
-
-		carsDisplytextArea.setEditable(false);
-		carsDisplytextArea.setBounds(19, 19, 716, 138);
-		CarDisplayframe.getContentPane().add(carsDisplytextArea);
 		exitButton.setBounds(135, 169, 117, 29);
 		
 		CarDisplayframe.getContentPane().add(exitButton);
+		carsDisplaytextArea.setEditable(false);
+		
+		
+		carsDisplaytextArea.setBounds(35, 10, 696, 153);
+		CarDisplayframe.getContentPane().add(carsDisplaytextArea);
 	}
 }
