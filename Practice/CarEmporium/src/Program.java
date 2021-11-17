@@ -13,12 +13,11 @@ public class Program {
 	private static CarsDisplayWindow carsDisplayWindow;
 	public static List<Car> cars = new ArrayList<>();
 
-
 	public static void main(String[] args) {
 
 
 
-		File file = new File("/Users/bp/Desktop/MIU/CS203Course/Practice/CarEmporium/files/cars.text");
+		File file = new File("files\\cars.text");
 		try {
 			FileInputStream fis = new FileInputStream(file);
 			ObjectInputStream ois = new ObjectInputStream(fis);

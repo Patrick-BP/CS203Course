@@ -46,7 +46,7 @@ public class CarEntryWindow {
 		carEntryFrame = new JFrame();
 		carEntryFrame.setResizable(false);
 		carEntryFrame.setTitle("Car Emporium -Car Entry");
-		carEntryFrame.setBounds(100, 100, 450, 300);
+		carEntryFrame.setBounds(100, 100, 500, 300);
 		carEntryFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		carEntryFrame.getContentPane().setLayout(null);
 		
