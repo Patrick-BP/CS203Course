@@ -16,15 +16,12 @@ public class CarEletric extends Car{
 	}
 	@Override
 	public String toString() {
-		return   super.toString() +
-				"\nbatterySize:               " + batterySize +
-				"\nbatteryType:               " + batteryType +
-				"\n-----------------------------------------";
+		return   super.toString() +"\n" + 
+				"Battery Size: " + batterySize + "\n"+
+				"Battery Type: " + batteryType +"\n"+
+
+				"\n___________________________________________";
 	}
-	
-	
-	
-	
 	
 
 }

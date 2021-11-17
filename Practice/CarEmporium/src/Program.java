@@ -19,7 +19,18 @@ public class Program {
 
 
 		File file = new File("/Users/bp/Desktop/MIU/CS203Course/Practice/CarEmporium/files/cars.text");
-
+		try {
+			FileInputStream fis = new FileInputStream(file);
+			ObjectInputStream ois = new ObjectInputStream(fis);
+			cars = (List<Car>)ois.readObject();
+			
+			ois.close();
+			fis.close();
+			} catch (IOException ex) {
+				ex.printStackTrace();
+			} catch (ClassNotFoundException classNotFoundException) {
+				classNotFoundException.printStackTrace();
+			}
 
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -57,7 +68,7 @@ public class Program {
 						}
 						carsDisplayWindow.carsDisplaytextArea.setText(res);
 
-						System.out.println(res);
+						
 					}
 				});
 
@@ -74,50 +85,127 @@ public class Program {
 							return;
 						}
 
-//						if (carEntryWindow.fuelTypetextField.getText().isEmpty() || carEntryWindow.fuelTypetextField.getText().isBlank()){
-//							JOptionPane.showMessageDialog(carEntryWindow.submitButton, "fuel Type cannot be empty");
-//							return;
-//						}
-//						if (carEntryWindow.batteryTypetextField.getText().isEmpty() || carEntryWindow.batteryTypetextField.getText().isBlank()){
-//							JOptionPane.showMessageDialog(carEntryWindow.submitButton, "battery Type cannot be empty");
-//							return;
-//						}
-						if((carEntryWindow.gasRadioButton.isSelected()==false)&&(carEntryWindow.ElectricRadioButton.isSelected()==false)){
-							JOptionPane.showMessageDialog(carEntryWindow.submitButton,"Please select radio button");
-						}
+						
+						
+
 
 						int year = 0;
 						double weight = 0;
 						double tanksise= 0;
 						double batterysize= 0;
+						
+						if (!(carEntryWindow.yeartextField.getText().isEmpty() )|| !(carEntryWindow.yeartextField.getText().isBlank())){
 						try {
 						year = Integer.parseInt(carEntryWindow.yeartextField.getText());
 						}catch (Exception y){
 							JOptionPane.showMessageDialog(carEntryWindow.submitButton,"year must be a numeric value");
+							return;
 						}
-						try {
-						weight = Integer.parseInt(carEntryWindow.weighttextField.getText());
-						}catch (Exception w){
-							JOptionPane.showMessageDialog(carEntryWindow.submitButton,"year must be a numeric value");
+						}else {
+							JOptionPane.showMessageDialog(null, "year cannot be empty");
+							return;
+						}
+
+						if (!(carEntryWindow.weighttextField.getText().isEmpty() )|| !(carEntryWindow.weighttextField.getText().isBlank())) {
+							try {
+								weight = Integer.parseInt(carEntryWindow.weighttextField.getText());
+							} catch (Exception w) {
+								JOptionPane.showMessageDialog(carEntryWindow.submitButton, "weight must be a numeric value");
+								return;
+							}
+						}else{
+							JOptionPane.showMessageDialog(carEntryWindow.submitButton,"weight cannot be Empty");
+							return;
 						}
 						
-//						try {
-//							tanksise = Integer.parseInt(carEntryWindow.tankSizetextField.getText());
-//						}catch (Exception w){
-//							JOptionPane.showMessageDialog(carEntryWindow.submitButton,"year must be a numeric value");
-//						}
-//						try {
-//							batterysize = Integer.parseInt(carEntryWindow.batterySizetextField.getText());
-//						}catch (Exception w){
-//							JOptionPane.showMessageDialog(carEntryWindow.submitButton,"year must be a numeric value");
-//						}
+						
 
 						if(carEntryWindow.ElectricRadioButton.isSelected()) {
+							
+							
+
+							
+							
+							
+							if (!(carEntryWindow.batterySizetextField.getText().isEmpty() || carEntryWindow.batterySizetextField.getText().isBlank())) {
+							
+							try {
+							if (Integer.parseInt(carEntryWindow.batterySizetextField.getText()) > 0) {
+							
+							batterysize = Integer.parseInt(carEntryWindow.batterySizetextField.getText());
+							}else {
+			                    JOptionPane.showMessageDialog(null, "Battery size must be great than 0");
+			                    return;
+							}
+							}catch (Exception i){
+								JOptionPane.showMessageDialog(null, "Battery size must be a numeric value");
+								return;
+							}
+							
+							
+							
+							}else{
+					            JOptionPane.showMessageDialog(null, "Battery size cannot be Empty");
+					            return;
+					        }
+							
+							
+							
+							
+							
+							if (carEntryWindow.batteryTypetextField.getText().isEmpty() || carEntryWindow.batteryTypetextField.getText().isBlank()){
+								JOptionPane.showMessageDialog(carEntryWindow.submitButton, "battery Type cannot be empty");
+								return;
+							}
+							
+							
+							
+							
+
+
+							
 							Car car = new CarEletric(carEntryWindow.maketextField.getText(), carEntryWindow.modeltextField.getText(), year, weight, carEntryWindow.colorcomboBox.getSelectedItem().toString(), batterysize, carEntryWindow.batteryTypetextField.getText());
 							cars.add(car);
+							
 							}else {
+								
+
+
+							if (!(carEntryWindow.tankSizetextField.getText().isEmpty() || carEntryWindow.tankSizetextField.getText().isBlank())) {
+								try {
+									if (Integer.parseInt(carEntryWindow.tankSizetextField.getText()) > 0) {
+										tanksise = Integer.parseInt(carEntryWindow.tankSizetextField.getText());
+									} else {
+										JOptionPane.showMessageDialog(null, "Tank size must be great than 0");
+										return;
+
+									}
+								} catch (Exception p) {
+									JOptionPane.showMessageDialog(carEntryWindow.submitButton, "Tank size must be a numeric value");
+									return;
+								}
+							}else{
+								JOptionPane.showMessageDialog(carEntryWindow.submitButton, "Tank size cannot be empty");
+								return;
+							}
+
+
+
+							if (carEntryWindow.fuelTypetextField.getText().isEmpty() || carEntryWindow.fuelTypetextField.getText().isBlank()){
+								JOptionPane.showMessageDialog(carEntryWindow.submitButton, "fuel Type cannot be empty");
+								return;
+							}
+
+
+
+
+
+
+								
+							
 							Car car = new GasCar(carEntryWindow.maketextField.getText(), carEntryWindow.modeltextField.getText(), year, weight, carEntryWindow.colorcomboBox.getSelectedItem().toString(), tanksise, carEntryWindow.fuelTypetextField.getText());
 							cars.add(car);
+							
 						}
 
 
@@ -207,24 +295,10 @@ public class Program {
 				carEmporiumWindow.carDisplayButton.addActionListener(new ActionListener() {
 					@Override
 					public void actionPerformed(ActionEvent e) {
-						try {
-						FileInputStream fis = new FileInputStream(file);
-						ObjectInputStream ois = new ObjectInputStream(fis);
-						cars = (List<Car>)ois.readObject();
 						
-						ois.close();
-						fis.close();
-						} catch (IOException ex) {
-							ex.printStackTrace();
-						} catch (ClassNotFoundException classNotFoundException) {
-							classNotFoundException.printStackTrace();
-						}
 
 					}
 				});
-
-
-
 
 			}
 			public void closeApp(){

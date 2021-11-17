@@ -32,11 +32,11 @@ public class Car implements java.io.Serializable {
 	}
 	@Override
 	public String toString() {
-		return "make:                          " + make +
-				"\nmodel:                      " + model +
-				"\nyear:                       " + year +
-				"\nweight:                     " + weight +
-				"\ncolor:                      " + color;
+		return "\nMake: " + make + "\n"+
+				"Model: " +   model + "\n" + 
+				"Year: " + year + "\n"+
+				"Weight: " + weight + "\n"+
+				"Color: " + color;
 	}
 	
 	

@@ -23,10 +23,10 @@ public class GasCar extends Car{
 
 	@Override
 	public String toString() {
-		return  super.toString() +
-				"\ntankSize:                      " + tankSize +
-				"\nfuelType:                      " + fuelType+
-				"\n----------------------------------------------" ;
+		return  super.toString() + "\n" + 
+				"Tank Size: " + tankSize + "\n"+
+				"Fuel Type: " + fuelType + "\n"+
+				"\n___________________________________________";
 	}
 
 
