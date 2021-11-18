@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class Q4 {
     public static void main(String[] args) {
-        String filePath = "/Users/bp/Desktop/MIU/CS203Course/Assignments/Lab6/Files/Q4File.txt";
+        String filePath = "Files/Q4File.txt";
         try {
             File file = new File(filePath);
             if (file.createNewFile()) {
@@ -32,7 +32,7 @@ public class Q4 {
 
 
         try {
-            FileWriter writeFile = new FileWriter(filePath);
+            FileWriter writeFile = new FileWriter(filePath, true);
             BufferedWriter bWriter = new BufferedWriter(writeFile);
             bWriter.write(input);
             bWriter.close();
